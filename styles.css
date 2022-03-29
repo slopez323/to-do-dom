@@ -1,3 +1,110 @@
+body{
+    display: flex;
+    justify-content: center;
+    font-family: 'Calistoga', cursive;
+    background-color: black;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+
+    width: 800px;
+    min-height: 230px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+
+    position: relative;
+}
+
+h1{
+    transform: rotate(-40deg);
+    font-size: 50px;
+    color:darkkhaki;
+
+    position: absolute;
+    left: 10px;
+    top:80px;
+    margin: 0;
+}
+
+form{
+    position: absolute;
+    top:60px;
+}
+
+.btn{
+    border: none;
+    padding: 5px;
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+#addBtn{
+    background-color: forestgreen;
+    color: antiquewhite;
+}
+
+.delete{
+    margin-top: 30px;
+    align-self: flex-end;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#delComp{
+    background-color: gold;
+    color:black;
+}
+
+#delAll{
+    background-color: red;
+    color: whitesmoke;
+}
+
+.list{
+    width: 500px;
+    padding: 10px;
+    text-align: center;
+}
+
+.listItem{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gainsboro;
+    padding: 10px 0;
+}
+
+.listItem i{
+    padding: 0 5px;
+}
+
 .completed{
     text-decoration: line-through;
+    text-decoration-color: limegreen;
+}
+
+.fa-trash-can:hover{
+    cursor: pointer;
+    color:crimson;
+}
+
+.fa-check:hover{
+    cursor: pointer;
+    color:limegreen;
+}
+
+.fa-pen-to-square:hover{
+    cursor: pointer;
+    color: goldenrod;
+}
+
+.btn:hover{
+    cursor: pointer;
+    transform: scale(1.05);
 }

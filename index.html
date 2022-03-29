@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b1efd90343.js" crossorigin="anonymous"></script>
 
     <title>To-Do List</title>
@@ -13,20 +16,21 @@
 </head>
 
 <body>
-    <h1>To-Do List</h1>
-    <form id="add">
-        <input id = "newTodo" type="text" autocomplete="off">
-        <input type="submit" value="ADD TO LIST">
-    </form>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <form id="add">
+            <input id="newTodo" type="text" autocomplete="off">
+            <input class="btn" id="addBtn" type="submit" value="ADD TO LIST">
+        </form>
 
-    <div>
-        <button id="delComp">DELETE COMPLETED ITEMS</button>
-        <button id="delAll">DELETE ALL ITEMS</button>
+        <div class="delete">
+            <button class="btn" id="delComp">DELETE COMPLETED ITEMS</button>
+            <button class="btn" id="delAll">DELETE ALL ITEMS</button>
+        </div>
+        <div class="list">
+
+        </div>
     </div>
-    <div class="list">
-
-    </div>
-
 
 
     <script src="main.js"></script>
