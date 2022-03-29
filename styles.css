@@ -22,12 +22,14 @@ body{
 
 h1{
     transform: rotate(-40deg);
-    font-size: 50px;
-    color:darkkhaki;
+    font-size: 45px;
+    color:darkgray;
+    border-top: 5px solid darkgray;
+    border-bottom: 5px solid darkgray;
 
     position: absolute;
     left: 10px;
-    top:80px;
+    top:75px;
     margin: 0;
 }
 
