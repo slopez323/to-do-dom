@@ -21,6 +21,7 @@ addItem.addEventListener('submit', function (event) {
     if(document.querySelector('p')) document.querySelector('p').remove();
 
     let newItem = document.createElement('div');
+    let task = document.createElement('span');
     let listActions = document.createElement('span');
     let deleteIcon = document.createElement('i');
     let completeIcon = document.createElement('i');
@@ -30,6 +31,7 @@ addItem.addEventListener('submit', function (event) {
     completeIcon.className = `fa fa-solid fa-check complete-${count}`
     deleteIcon.className = `fa fa-solid fa-trash-can delete-${count}`;
     
+    listActions.className = 'actions';
     listActions.append(editIcon, completeIcon, deleteIcon);
 
 
@@ -37,8 +39,8 @@ addItem.addEventListener('submit', function (event) {
     newItem.id = `item-${count}`;
     count++
 
-    newItem.textContent = newTodo.value;
-    newItem.append(listActions);
+    task.textContent = newTodo.value;
+    newItem.append(task, listActions);
 
     listView.appendChild(newItem);
     newTodo.value = '';
@@ -85,22 +87,23 @@ function completeItem(clicked) {
 function editItem(clicked){
     let number = (clicked[3].substring(clicked[3].search("-") + 1));
     let item = document.querySelector(`#item-${number}`);
-    let span = item.querySelector('span');
+    let actions = item.querySelector('.actions');
+    let text = item.querySelector('span');
 
     let done = document.createElement('button');
     done.className = 'btn';
     done.textContent = 'Done';
 
     item.append(done);
-    span.style.display = 'none';
+    actions.style.display = 'none';
 
-    item.contentEditable = true;
-    item.focus();
+    text.contentEditable = true;
+    text.focus();
 
     done.addEventListener('click', function(){
         done.remove();
-        item.contentEditable = false;
-        span.style.display = '';
+        text.contentEditable = false;
+        actions.style.display = '';
     });
 };
 
